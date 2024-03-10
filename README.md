@@ -2,6 +2,8 @@
 
 Sample app to demonstrate [OpenCV Face detection](https://opencv.org/) with video from device in Compose.
 
+[OpenCvFaceDetection.webm](https://github.com/darkwhite220/OpenCvFaceDetection_Kotlin/assets/53045980/30fa9329-5cfb-47ba-9c22-8d78f8d317e1)
+
 ## Benchmark 🤓
 
 On my test device Samsung M21:
