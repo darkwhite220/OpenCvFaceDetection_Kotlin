@@ -22,51 +22,51 @@ On my test device Samsung M21:
 
     <details>
     <summary>settings.gradle</summary>  
-    <p>
-    pluginManagement {
-        repositories {
-            google {
-                content {
-                    includeGroupByRegex("com\\.android.*")
-                    includeGroupByRegex("com\\.google.*")
-                    includeGroupByRegex("androidx.*")
-                }
-            }
-            mavenCentral()
-            gradlePluginPortal()
-        }
-    }
-    dependencyResolutionManagement {
-        repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-        repositories {
-            google()
-            mavenCentral()
-        }
-    }
-    
-    rootProject.name = "OpenCVFaceDetection" <---- YOUR PROJECT NAME
-    include(":app")
-    
-    include(":openCV")
-    project(":openCV").projectDir = File(rootDir, "sdk/")
-    </p>
-  </details>
+       <p>
+          pluginManagement {
+              repositories {
+                  google {
+                      content {
+                          includeGroupByRegex("com\\.android.*")
+                          includeGroupByRegex("com\\.google.*")
+                          includeGroupByRegex("androidx.*")
+                      }
+                  }
+                  mavenCentral()
+                  gradlePluginPortal()
+              }
+          }
+          dependencyResolutionManagement {
+              repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+              repositories {
+                  google()
+                  mavenCentral()
+              }
+          }
+          
+          rootProject.name = "OpenCVFaceDetection" <---- YOUR PROJECT NAME
+          include(":app")
+          
+          include(":openCV")
+          project(":openCV").projectDir = File(rootDir, "sdk/")
+      </p> 
+   </details>
 
 5. Update "build.gradle (Module :openCV)" file
 
     <details>
-  <summary>build.gradle (Module :openCV)</summary>  
-<p>
-  ...
-  minSdkVersion 24 (same as your main module)
-  targetSdkVersion 34 (same as your main module)
-  add:
-  kotlinOptions {
-    jvmTarget = "1.8" (same as your main module)
-  }
-  ...
-</p>
-</details>
+        <summary>build.gradle (Module :openCV)</summary>  
+            <p>
+                 ...
+                 minSdkVersion 24 (same as your main module)
+                 targetSdkVersion 34 (same as your main module)
+                 add:
+                 kotlinOptions {
+                   jvmTarget = "1.8" (same as your main module)
+                 }
+                 ...
+            </p>
+   </details>
 
 6. Import openCV in your mai module
 
