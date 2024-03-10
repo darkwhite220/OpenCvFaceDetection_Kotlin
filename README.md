@@ -19,6 +19,7 @@ On my test device Samsung M21:
 3. File -> New -> Import module -> Select the sdk module & name it ":openCV"
 *You may get errors here, just follow the steps here*
 4. Update "settings.gradle" file
+
     <details>
     <summary>settings.gradle</summary>  
     <p>
@@ -50,7 +51,9 @@ On my test device Samsung M21:
     project(":openCV").projectDir = File(rootDir, "sdk/")
     </p>
   </details>
-    5. Update "build.gradle (Module :openCV)" file
+
+5. Update "build.gradle (Module :openCV)" file
+
     <details>
   <summary>build.gradle (Module :openCV)</summary>  
 <p>
@@ -64,7 +67,9 @@ On my test device Samsung M21:
   ...
 </p>
 </details>
-    6. Import openCV in your mai module
+
+6. Import openCV in your mai module
+
     <details>
   <summary>build.gradle (Module :app)</summary>
 <p>
@@ -75,7 +80,9 @@ On my test device Samsung M21:
   }
 </p>
 </details>
-    7. Download the latest version of onnx file for face detection and place it in res/raw
+
+7. Download the latest version of onnx file for face detection and place it in res/raw
+
 [Current latest face_detection_yunet_2023mar.onnx](https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet)
 *Note: don't pick the file with "_int8.onnx" ending*
 
