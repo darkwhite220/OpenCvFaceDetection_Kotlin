@@ -102,7 +102,7 @@ private fun openCvDetection(
     }
     
     // for full video, while(true){
-    (0..50).forEach { _ -> // first 50 frames
+    (0..450).forEach { _ -> // first 50 frames
         // 1. extract a frame
         videoCapture.read(videoFrame)
         
