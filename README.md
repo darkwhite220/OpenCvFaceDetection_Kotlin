@@ -15,8 +15,8 @@ On my test device Samsung M21:
 ## Setup
 
 1. Download the "Android" package from [OpenCV](https://opencv.org/releases/)
-2. Extract the "sdk" folder & copy it into root directory of your project
-3. File -> New -> Import module -> Select the sdk module & name it ":openCV"
+2. Extract the the zip file and copy "sdk" folder into root directory of your project
+3. File -> New -> Import module -> Select the "sdk" module & name it ":openCV"
 *You may get errors here, just follow the steps here*
 4. Update "settings.gradle" file
 
@@ -49,33 +49,33 @@ On my test device Samsung M21:
           
           include(":openCV")
           project(":openCV").projectDir = File(rootDir, "sdk/")
-5. 
+
    </details>
 
-   5. Update "build.gradle (Module :openCV)" file
+5. Update "build.gradle (Module :openCV)" file
 
-       <details>
-           <summary>build.gradle (Module :openCV)</summary>  
+   <details>      
+   <summary>build.gradle (Module :openCV)</summary>  
             
-              ...
-              minSdkVersion 24 (same as your main module)
-              targetSdkVersion 34 (same as your main module)
-              add:
-              kotlinOptions {
-                jvmTarget = "1.8" (same as your main module)
-              }
-              ...
+          ...
+          minSdkVersion 24 (same as your main module)
+          targetSdkVersion 34 (same as your main module)
+          add:
+          kotlinOptions {
+            jvmTarget = "1.8" (same as your main module)
+          }
+          ...
 
-      </details>
+   </details>
 
 6. Import openCV in your mai module
 
     <details>
      <summary>build.gradle (Module :app)</summary>
    
-       ...
-       implementation (fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-       implementation (project(":openCV"))
+          ...
+          implementation (fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+          implementation (project(":openCV"))
 
    </details>
 
