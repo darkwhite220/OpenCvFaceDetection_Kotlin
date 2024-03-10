@@ -52,21 +52,21 @@ On my test device Samsung M21:
 5. 
    </details>
 
-5. Update "build.gradle (Module :openCV)" file
+   5. Update "build.gradle (Module :openCV)" file
 
-    <details>
-        <summary>build.gradle (Module :openCV)</summary>  
+       <details>
+           <summary>build.gradle (Module :openCV)</summary>  
             
-           ...
-           minSdkVersion 24 (same as your main module)
-           targetSdkVersion 34 (same as your main module)
-           add:
-           kotlinOptions {
-             jvmTarget = "1.8" (same as your main module)
-           }
-           ...
+              ...
+              minSdkVersion 24 (same as your main module)
+              targetSdkVersion 34 (same as your main module)
+              add:
+              kotlinOptions {
+                jvmTarget = "1.8" (same as your main module)
+              }
+              ...
 
-   </details>
+      </details>
 
 6. Import openCV in your mai module
 
@@ -82,6 +82,7 @@ On my test device Samsung M21:
 7. Download the latest version of onnx file for face detection and place it in res/raw
 
 [Current latest face_detection_yunet_2023mar.onnx](https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet)
+
 *Note: don't pick the file with "_int8.onnx" ending*
 
 ## Find me! 👨‍💻
