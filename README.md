@@ -22,7 +22,7 @@ On my test device Samsung M21:
 
     <details>
     <summary>settings.gradle</summary>  
-       <p>
+
           pluginManagement {
               repositories {
                   google {
@@ -49,37 +49,35 @@ On my test device Samsung M21:
           
           include(":openCV")
           project(":openCV").projectDir = File(rootDir, "sdk/")
-      </p> 
+5. 
    </details>
 
 5. Update "build.gradle (Module :openCV)" file
 
     <details>
         <summary>build.gradle (Module :openCV)</summary>  
-            <p>
-                 ...
-                 minSdkVersion 24 (same as your main module)
-                 targetSdkVersion 34 (same as your main module)
-                 add:
-                 kotlinOptions {
-                   jvmTarget = "1.8" (same as your main module)
-                 }
-                 ...
-            </p>
+            
+           ...
+           minSdkVersion 24 (same as your main module)
+           targetSdkVersion 34 (same as your main module)
+           add:
+           kotlinOptions {
+             jvmTarget = "1.8" (same as your main module)
+           }
+           ...
+
    </details>
 
 6. Import openCV in your mai module
 
     <details>
-  <summary>build.gradle (Module :app)</summary>
-<p>
-  {
-    ...
-    implementation (fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation (project(":openCV"))
-  }
-</p>
-</details>
+     <summary>build.gradle (Module :app)</summary>
+   
+       ...
+       implementation (fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+       implementation (project(":openCV"))
+
+   </details>
 
 7. Download the latest version of onnx file for face detection and place it in res/raw
 
