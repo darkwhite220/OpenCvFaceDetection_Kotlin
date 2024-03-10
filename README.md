@@ -19,39 +19,39 @@ On my test device Samsung M21:
 3. File -> New -> Import module -> Select the sdk module & name it ":openCV"
 *You may get errors here, just follow the steps here*
 4. Update "settings.gradle" file
-<details>
-  <summary>settings.gradle</summary>  
-<p>
-pluginManagement {
-    repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
+    <details>
+    <summary>settings.gradle</summary>  
+    <p>
+    pluginManagement {
+        repositories {
+            google {
+                content {
+                    includeGroupByRegex("com\\.android.*")
+                    includeGroupByRegex("com\\.google.*")
+                    includeGroupByRegex("androidx.*")
+                }
             }
+            mavenCentral()
+            gradlePluginPortal()
         }
-        mavenCentral()
-        gradlePluginPortal()
     }
-}
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
+    dependencyResolutionManagement {
+        repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+        repositories {
+            google()
+            mavenCentral()
+        }
     }
-}
-
-rootProject.name = "OpenCVFaceDetection" <---- YOUR PROJECT NAME
-include(":app")
-
-include(":openCV")
-project(":openCV").projectDir = File(rootDir, "sdk/")
-</p>
-</details>
-  5. Update "build.gradle (Module :openCV)" file
-<details>
+    
+    rootProject.name = "OpenCVFaceDetection" <---- YOUR PROJECT NAME
+    include(":app")
+    
+    include(":openCV")
+    project(":openCV").projectDir = File(rootDir, "sdk/")
+    </p>
+  </details>
+    5. Update "build.gradle (Module :openCV)" file
+    <details>
   <summary>build.gradle (Module :openCV)</summary>  
 <p>
   ...
@@ -64,8 +64,8 @@ project(":openCV").projectDir = File(rootDir, "sdk/")
   ...
 </p>
 </details>
-  6. Import openCV in your mai module
-<details>
+    6. Import openCV in your mai module
+    <details>
   <summary>build.gradle (Module :app)</summary>
 <p>
   {
@@ -75,8 +75,8 @@ project(":openCV").projectDir = File(rootDir, "sdk/")
   }
 </p>
 </details>
-  7. Download the latest version of onnx file for face detection and place it in res/raw
-[Current latest (face_detection_yunet_2023mar.onnx)](https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet)
+    7. Download the latest version of onnx file for face detection and place it in res/raw
+[Current latest face_detection_yunet_2023mar.onnx](https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet)
 *Note: don't pick the file with "_int8.onnx" ending*
 
 ## Find me! 👨‍💻
