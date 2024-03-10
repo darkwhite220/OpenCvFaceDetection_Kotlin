@@ -72,7 +72,7 @@ On my test device Samsung M21:
 
    </details>
 
-6. Import openCV in your mai module
+6. Import openCV in your main module
 
     <details>
      <summary>build.gradle (Module :app)</summary>
