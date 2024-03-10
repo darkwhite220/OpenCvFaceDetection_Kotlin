@@ -17,7 +17,9 @@ On my test device Samsung M21:
 1. Download the "Android" package from [OpenCV](https://opencv.org/releases/)
 2. Extract the the zip file and copy "sdk" folder into root directory of your project
 3. File -> New -> Import module -> Select the "sdk" module & name it ":openCV"
-*You may get errors here, just follow the steps here*
+
+   *You may get errors here, just follow the steps here*
+
 4. Update "settings.gradle" file
 
     <details>
